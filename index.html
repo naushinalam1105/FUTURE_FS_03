@@ -63,15 +63,15 @@
     <script>
         const shakes = [
             { name: "Oreo Classic", price: 120, trending: true, desc: "Creamy vanilla blended with real Oreo chunks.", img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400" },
-            { name: "Nutella Blast", price: 160, trending: true, desc: "A rich hazelnut chocolate dream.", img: "https://images.unsplash.com/photo-1541658016709-827b58629d78?w=400" },
-            { name: "Belgian Dark", price: 150, trending: false, desc: "Intense dark chocolate for cocoa lovers.", img: "https://images.unsplash.com/photo-1626078299034-9c4440182a17?w=400" },
+            { name: "Nutella Blast", price: 160, trending: true, desc: "A rich hazelnut chocolate dream.", img: "https://images.unsplash.com/photo-1626078299034-9c4440182a17?w=400" }, // ALT IMAGE
+            { name: "Belgian Dark", price: 150, trending: false, desc: "Intense dark chocolate for cocoa lovers.", img: "https://images.unsplash.com/photo-1596131397999-bb2f47c5d797?w=400" }, // ALT IMAGE
             { name: "KitKat Break", price: 130, trending: false, desc: "Chunky KitKat pieces in a smooth base.", img: "https://images.unsplash.com/photo-1579954115545-a95591f28be0?w=400" },
             { name: "Berry Silk", price: 110, trending: false, desc: "Velvety strawberry and fresh cream mix.", img: "https://images.unsplash.com/photo-1472555794301-77353b152fb7?w=400" },
             { name: "Caramel Crunch", price: 125, trending: true, desc: "Golden caramel with crunchy butterscotch.", img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400" },
-            { name: "Brownie Fudge", price: 170, trending: false, desc: "Warm brownie bits in a chilled shake.", img: "https://images.unsplash.com/photo-1632514115426-382902640562?w=400" },
-            { name: "Saffron Royal", price: 180, trending: false, desc: "Luxury saffron milk with crushed nuts.", img: "https://images.unsplash.com/photo-1595011030018-090c2534571c?w=400" },
+            { name: "Brownie Fudge", price: 170, trending: false, desc: "Warm brownie bits in a chilled shake.", img: "https://images.unsplash.com/photo-1632514115426-382902640562?w=400" }, // ALT IMAGE
+            { name: "Saffron Royal", price: 180, trending: false, desc: "Luxury saffron milk with crushed nuts.", img: "https://images.unsplash.com/photo-1595011030018-090c2534571c?w=400" }, // ALT IMAGE
             { name: "Cold Coffee", price: 99, trending: true, desc: "The classic energetic caffeine kick.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" },
-            { name: "Assam Tea-Zest", price: 129, trending: false, desc: "A special Jorhat tea-infused creamy treat.", img: "https://images.unsplash.com/photo-1544787210-282aa3cc0000?w=400" }
+            { name: "Assam Tea-Zest", price: 129, trending: false, desc: "A special Jorhat tea-infused creamy treat.", img: "https://images.unsplash.com/photo-1544787210-282aa3cc0000?w=400" } // ALT IMAGE
         ];
 
         const mocktails = [
@@ -94,11 +94,11 @@
             return `
                 <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 relative flex flex-col h-full">
                     ${trendingBadge}
-                    <div class="h-32 overflow-hidden">
-                        <img src="${item.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="h-32 overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="${item.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1582760997140-5e36502672ba?w=400&q=80'">
                     </div>
-                    <div class="p-4 flex flex-col flex-grow">
-                        <h5 class="font-bold text-sm truncate uppercase tracking-tight">${item.name}</h5>
+                    <div class="p-4 flex flex-col flex-grow bg-white">
+                        <h5 class="font-bold text-sm truncate uppercase tracking-tight text-slate-900">${item.name}</h5>
                         <p class="text-[10px] text-slate-500 italic mt-1 leading-tight flex-grow">${item.desc}</p>
                         <p class="text-indigo-600 font-black text-lg mt-2">₹${item.price}</p>
                     </div>
