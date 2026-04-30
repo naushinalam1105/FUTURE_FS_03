@@ -9,7 +9,7 @@
 </head>
 <body class="bg-slate-50 font-sans text-slate-900 scroll-smooth">
 
-    <nav class="flex justify-between items-center px-10 py-5 bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <nav class="flex justify-between items-center px-10 py-5 bg-white shadow-sm sticky top-0 z-50">
         <h1 class="text-2xl font-black italic tracking-tighter uppercase text-indigo-700">Star<span class="text-pink-500">cups</span></h1>
         <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-slate-500">
             <a href="#home" class="hover:text-pink-500 transition">Home</a>
@@ -19,10 +19,10 @@
     </nav>
 
     <header id="home" class="relative h-[60vh] flex items-center justify-center text-center text-white overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=1200&auto=format&fit=crop');"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-indigo-900/60 z-10"></div>
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1200&q=80');"></div>
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
         <div class="relative z-20 px-6">
-            <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter italic">The <span class="text-pink-400">Drink of Joy</span></h2>
+            <h2 class="text-6xl md:text-8xl font-black mb-4 uppercase tracking-tighter italic">The <span class="text-pink-400">Drink of Joy</span></h2>
             <p class="text-lg md:text-xl font-medium italic text-slate-300 uppercase tracking-widest">Baruah Chariali, Near Monisha Bakery, Jorhat Assam</p>
         </div>
     </header>
@@ -30,7 +30,7 @@
     <section id="menu" class="py-20 px-10 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <h3 class="text-4xl font-black uppercase italic text-slate-800">Our Menu</h3>
-            <p class="text-slate-500 mt-2 font-medium underline decoration-pink-500 decoration-2 underline-offset-4">10 Thick Shakes & 10 Refreshing Mocktails</p>
+            <p class="text-slate-500 mt-2 font-medium border-b-2 border-pink-500 inline-block pb-1">10 Thick Shakes & 10 Refreshing Mocktails</p>
         </div>
 
         <h4 class="text-2xl font-bold mb-8 text-indigo-700 border-l-4 border-indigo-700 pl-4 uppercase">Indulgent Shakes</h4>
@@ -44,47 +44,47 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
                 <h3 class="text-4xl font-black uppercase mb-6 italic tracking-tight">Find the <span class="text-pink-500">Magic</span></h3>
-                <p class="text-slate-400 text-lg mb-8">Visit our outlet for the freshest experience in Jorhat. Located conveniently near Monisha Bakery.</p>
+                <p class="text-slate-400 text-lg mb-8 italic">Visit our outlet for the freshest experience in Jorhat. Located conveniently near Monisha Bakery.</p>
                 <div class="space-y-4 font-bold italic">
                     <p><i class="fas fa-map-marker-alt text-pink-500 mr-3"></i> Baruah Chariali, Jorhat</p>
                     <p><i class="fas fa-clock text-pink-500 mr-3"></i> 10:00 AM - 10:00 PM</p>
                 </div>
             </div>
-            <div class="h-80 rounded-3xl overflow-hidden shadow-2xl">
+            <div class="h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/5">
                 <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?q=Baruah%20Chariali,%20Jorhat,%20Assam&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-slate-500 text-xs uppercase tracking-widest bg-slate-50 border-t">
+    <footer class="py-10 text-center text-slate-500 text-xs uppercase tracking-widest bg-white border-t">
         &copy; 2026 Starcups Jorhat | Designed by Naushin
     </footer>
 
     <script>
         const shakes = [
-            { name: "Oreo Classic", price: 120, trending: true, img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500&q=80" },
-            { name: "Nutella Blast", price: 160, trending: true, img: "https://images.unsplash.com/photo-1541658016709-827b58629d78?w=500&q=80" },
-            { name: "Belgian Dark", price: 150, trending: false, img: "https://images.unsplash.com/photo-1626078299034-9c4440182a17?w=500&q=80" },
-            { name: "KitKat Break", price: 130, trending: false, img: "https://images.unsplash.com/photo-1579954115545-a95591f28be0?w=500&q=80" },
-            { name: "Berry Silk", price: 110, trending: false, img: "https://images.unsplash.com/photo-1590577976322-3d2d6e2130ee?w=500&q=80" },
-            { name: "Caramel Crunch", price: 125, trending: true, img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&q=80" },
-            { name: "Brownie Fudge", price: 170, trending: false, img: "https://images.unsplash.com/photo-1632514115426-382902640562?w=500&q=80" },
-            { name: "Saffron Royal", price: 180, trending: false, img: "https://images.unsplash.com/photo-1595011030018-090c2534571c?w=500&q=80" },
-            { name: "Cold Coffee", price: 99, trending: true, img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80" },
-            { name: "Assam Tea-Zest", price: 129, trending: false, img: "https://images.unsplash.com/photo-1544787210-282aa3cc0000?w=500&q=80" }
+            { name: "Oreo Classic", price: 120, trending: true, desc: "Creamy vanilla blended with real Oreo chunks.", img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400" },
+            { name: "Nutella Blast", price: 160, trending: true, desc: "A rich hazelnut chocolate dream.", img: "https://images.unsplash.com/photo-1541658016709-827b58629d78?w=400" },
+            { name: "Belgian Dark", price: 150, trending: false, desc: "Intense dark chocolate for cocoa lovers.", img: "https://images.unsplash.com/photo-1626078299034-9c4440182a17?w=400" },
+            { name: "KitKat Break", price: 130, trending: false, desc: "Chunky KitKat pieces in a smooth base.", img: "https://images.unsplash.com/photo-1579954115545-a95591f28be0?w=400" },
+            { name: "Berry Silk", price: 110, trending: false, desc: "Velvety strawberry and fresh cream mix.", img: "https://images.unsplash.com/photo-1472555794301-77353b152fb7?w=400" },
+            { name: "Caramel Crunch", price: 125, trending: true, desc: "Golden caramel with crunchy butterscotch.", img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400" },
+            { name: "Brownie Fudge", price: 170, trending: false, desc: "Warm brownie bits in a chilled shake.", img: "https://images.unsplash.com/photo-1632514115426-382902640562?w=400" },
+            { name: "Saffron Royal", price: 180, trending: false, desc: "Luxury saffron milk with crushed nuts.", img: "https://images.unsplash.com/photo-1595011030018-090c2534571c?w=400" },
+            { name: "Cold Coffee", price: 99, trending: true, desc: "The classic energetic caffeine kick.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" },
+            { name: "Assam Tea-Zest", price: 129, trending: false, desc: "A special Jorhat tea-infused creamy treat.", img: "https://images.unsplash.com/photo-1544787210-282aa3cc0000?w=400" }
         ];
 
         const mocktails = [
-            { name: "Blue Lagoon", price: 110, trending: true, img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=500&q=80" },
-            { name: "Virgin Mojito", price: 99, trending: true, img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&q=80" },
-            { name: "Watermelon Pop", price: 120, trending: false, img: "https://images.unsplash.com/photo-1582760997140-5e36502672ba?w=500&q=80" },
-            { name: "Green Apple", price: 110, trending: false, img: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&q=80" },
-            { name: "Peach Tea", price: 90, trending: false, img: "https://images.unsplash.com/photo-1543158181-e6f9f670c5b5?w=500&q=80" },
-            { name: "Passion Fruit", price: 130, trending: true, img: "https://images.unsplash.com/photo-1563223552-30400d41fca5?w=500&q=80" },
-            { name: "Orange Sunrise", price: 115, trending: false, img: "https://images.unsplash.com/photo-1510626398611-c723d3753e27?w=500&q=80" },
-            { name: "Spiced Guava", price: 105, trending: false, img: "https://images.unsplash.com/photo-1536935338213-d2c123304403?w=500&q=80" },
-            { name: "Sunset Fizz", price: 145, trending: false, img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&q=80" },
-            { name: "Lemon Sparkle", price: 80, trending: true, img: "https://images.unsplash.com/photo-1620360289413-0ec997762691?w=500&q=80" }
+            { name: "Blue Lagoon", price: 110, trending: true, desc: "Sparkling citrus with a blue ocean vibe.", img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400" },
+            { name: "Virgin Mojito", price: 99, trending: true, desc: "Fresh mint and lime to beat the heat.", img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" },
+            { name: "Watermelon Pop", price: 120, trending: false, desc: "Cooling watermelon juice with bubbles.", img: "https://images.unsplash.com/photo-1582760997140-5e36502672ba?w=400" },
+            { name: "Green Apple", price: 110, trending: false, desc: "Crisp and tangy green apple sparkle.", img: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400" },
+            { name: "Peach Tea", price: 90, trending: false, desc: "Cold brewed tea with a fruity peach zest.", img: "https://images.unsplash.com/photo-1543158181-e6f9f670c5b5?w=400" },
+            { name: "Passion Fruit", price: 130, trending: true, desc: "Tropical passion fruit fizz for a sunny day.", img: "https://images.unsplash.com/photo-1563223552-30400d41fca5?w=400" },
+            { name: "Orange Sunrise", price: 115, trending: false, desc: "Beautiful layered citrus and berry juice.", img: "https://images.unsplash.com/photo-1510626398611-c723d3753e27?w=400" },
+            { name: "Spiced Guava", price: 105, trending: false, desc: "Sweet guava with a classic spicy rim.", img: "https://images.unsplash.com/photo-1536935338213-d2c123304403?w=400" },
+            { name: "Sunset Fizz", price: 145, trending: false, desc: "A glowing berry mocktail with ice.", img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400" },
+            { name: "Lemon Sparkle", price: 80, trending: true, desc: "Simple, zesty, and highly refreshing.", img: "https://images.unsplash.com/photo-1620360289413-0ec997762691?w=400" }
         ];
 
         function createCard(item) {
@@ -92,14 +92,15 @@
                 `<div class="absolute top-2 left-2 bg-pink-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full z-10 animate-pulse">🔥 TRENDING</div>` : '';
             
             return `
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 relative">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 relative flex flex-col h-full">
                     ${trendingBadge}
-                    <div class="h-40 overflow-hidden">
-                        <img src="${item.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+                    <div class="h-32 overflow-hidden">
+                        <img src="${item.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
-                    <div class="p-4 bg-white">
-                        <h5 class="font-bold text-sm truncate uppercase tracking-tight text-slate-800">${item.name}</h5>
-                        <p class="text-indigo-600 font-black text-lg">₹${item.price}</p>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h5 class="font-bold text-sm truncate uppercase tracking-tight">${item.name}</h5>
+                        <p class="text-[10px] text-slate-500 italic mt-1 leading-tight flex-grow">${item.desc}</p>
+                        <p class="text-indigo-600 font-black text-lg mt-2">₹${item.price}</p>
                     </div>
                 </div>
             `;
