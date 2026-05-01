@@ -9,98 +9,124 @@
 </head>
 <body class="bg-slate-50 font-sans text-slate-900 scroll-smooth">
 
-    <nav class="flex justify-between items-center px-10 py-5 bg-white shadow-sm sticky top-0 z-50">
-        <h1 class="text-2xl font-black italic tracking-tighter uppercase text-indigo-700">Star<span class="text-pink-500">cups</span></h1>
-        <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-slate-500">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-6 py-4 bg-white shadow-md sticky top-0 z-50">
+        <h1 class="text-xl font-black italic text-indigo-700">STAR<span class="text-pink-500">CUPS</span></h1>
+        <div class="hidden lg:flex space-x-6 font-bold text-[10px] uppercase tracking-widest text-slate-500">
             <a href="#home" class="hover:text-pink-500 transition">Home</a>
-            <a href="#menu" class="hover:text-pink-500 transition">Menu</a>
-            <a href="#visit" class="hover:text-pink-500 transition">Visit</a>
+            <a href="#shakes" class="hover:text-pink-500 transition">Shakes</a>
+            <a href="#mocktails" class="hover:text-pink-500 transition">Mocktails</a>
+            <a href="#trending" class="hover:text-pink-500 transition">Trending</a>
+            <a href="#about" class="hover:text-pink-500 transition">About</a>
+            <a href="#visit" class="hover:text-pink-500 transition">Location</a>
+            <a href="#contact" class="hover:text-pink-500 transition">Contact</a>
         </div>
     </nav>
 
-    <header id="home" class="relative h-[60vh] flex items-center justify-center text-center text-white overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1200&q=80');"></div>
+    <!-- Hero -->
+    <header id="home" class="relative h-[50vh] flex items-center justify-center text-center text-white overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=1200&q=80');"></div>
         <div class="absolute inset-0 bg-black/60 z-10"></div>
         <div class="relative z-20 px-6">
-            <h2 class="text-6xl md:text-8xl font-black mb-4 uppercase tracking-tighter italic">The <span class="text-pink-400">Drink of Joy</span></h2>
-            <p class="text-lg md:text-xl font-medium italic text-slate-300 uppercase tracking-widest">Baruah Chariali, Near Monisha Bakery, Jorhat Assam</p>
+            <h2 class="text-5xl md:text-7xl font-black mb-4 italic uppercase">The <span class="text-pink-400">Drink of Joy</span></h2>
+            <p class="text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-slate-300">Baruah Chariali, Jorhat Assam</p>
         </div>
     </header>
 
-    <section id="menu" class="py-20 px-10 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h3 class="text-4xl font-black uppercase italic text-slate-800">Our Menu</h3>
-            <p class="text-slate-500 mt-2 font-medium border-b-2 border-pink-500 inline-block pb-1">10 Thick Shakes & 10 Refreshing Mocktails</p>
-        </div>
+    <!-- Menu Sections -->
+    <main class="max-w-7xl mx-auto px-6 py-16">
+        
+        <!-- Shakes -->
+        <section id="shakes" class="mb-20">
+            <h3 class="text-3xl font-black uppercase italic mb-8 border-l-4 border-indigo-700 pl-4 text-slate-800">Indulgent Shakes</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6" id="shakes-grid"></div>
+        </section>
 
-        <h4 class="text-2xl font-bold mb-8 text-indigo-700 border-l-4 border-indigo-700 pl-4 uppercase">Indulgent Shakes</h4>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-20" id="shakes-grid"></div>
+        <!-- Mocktails -->
+        <section id="mocktails" class="mb-20">
+            <h3 class="text-3xl font-black uppercase italic mb-8 border-l-4 border-pink-600 pl-4 text-slate-800">Sparkling Mocktails</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6" id="mocktails-grid"></div>
+        </section>
 
-        <h4 class="text-2xl font-bold mb-8 text-pink-600 border-l-4 border-pink-600 pl-4 uppercase">Refreshing Mocktails</h4>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-6" id="mocktails-grid"></div>
-    </section>
+        <!-- Trending Section -->
+        <section id="trending" class="py-16 bg-indigo-50 rounded-3xl px-10 mb-20 text-center">
+            <h3 class="text-4xl font-black uppercase italic mb-4 text-indigo-900">🔥 Top Trending</h3>
+            <p class="text-slate-600 mb-10 font-medium">The most loved drinks in Jorhat this week!</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="trending-grid"></div>
+        </section>
 
-    <section id="visit" class="py-20 bg-slate-900 text-white px-10">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-4xl font-black uppercase mb-6 italic tracking-tight">Find the <span class="text-pink-500">Magic</span></h3>
-                <p class="text-slate-400 text-lg mb-8 italic">Visit our outlet for the freshest experience in Jorhat. Located conveniently near Monisha Bakery.</p>
-                <div class="space-y-4 font-bold italic">
-                    <p><i class="fas fa-map-marker-alt text-pink-500 mr-3"></i> Baruah Chariali, Jorhat</p>
-                    <p><i class="fas fa-clock text-pink-500 mr-3"></i> 10:00 AM - 10:00 PM</p>
+        <!-- About & Reviews -->
+        <section id="about" class="py-16">
+            <h3 class="text-3xl font-black uppercase italic mb-12 text-center text-slate-800 underline decoration-pink-500 underline-offset-8">What Customers Say</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 italic text-sm">
+                    <p class="mb-4">"Best Oreo shake in Jorhat! The thickness is just perfect."</p>
+                    <span class="font-bold text-indigo-700 text-xs">- Rahul S.</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 italic text-sm">
+                    <p class="mb-4">"Refreshing mocktails. The Blue Lagoon is my personal favorite."</p>
+                    <span class="font-bold text-indigo-700 text-xs">- Priya B.</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 italic text-sm">
+                    <p class="mb-4">"Super affordable and very tasty. Highly recommended for students."</p>
+                    <span class="font-bold text-indigo-700 text-xs">- Amit K.</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 italic text-sm">
+                    <p class="mb-4">"Love the vibe of the outlet. The KitKat shake is a must-try!"</p>
+                    <span class="font-bold text-indigo-700 text-xs">- Sneha D.</span>
                 </div>
             </div>
-            <div class="h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/5">
+        </section>
+    </main>
+
+    <!-- Location & Contact -->
+    <section id="visit" class="bg-slate-900 text-white py-20 px-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h3 class="text-4xl font-black uppercase mb-8 italic">Visit <span class="text-pink-500">Us</span></h3>
+                <div class="space-y-6 text-slate-300">
+                    <p><i class="fas fa-map-marker-alt text-pink-500 mr-3"></i> Baruah Chariali, Near Monisha Bakery, Jorhat</p>
+                    <p id="contact"><i class="fas fa-phone text-pink-500 mr-3"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope text-pink-500 mr-3"></i> hello@starcups.com</p>
+                </div>
+            </div>
+            <div class="h-64 rounded-3xl overflow-hidden grayscale contrast-125 border border-white/10">
                 <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?q=Baruah%20Chariali,%20Jorhat,%20Assam&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-slate-500 text-xs uppercase tracking-widest bg-white border-t">
-        &copy; 2026 Starcups Jorhat | Designed by Naushin
+    <footer class="py-10 text-center text-[10px] uppercase font-bold tracking-widest text-slate-400">
+        &copy; 2026 Starcups Jorhat | Created by Naushin
     </footer>
 
     <script>
         const shakes = [
-            { name: "Oreo Classic", price: 120, trending: true, desc: "Creamy vanilla blended with real Oreo chunks.", img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400" },
-            { name: "Nutella Blast", price: 160, trending: true, desc: "A rich hazelnut chocolate dream.", img: "https://images.unsplash.com/photo-1626078299034-9c4440182a17?w=400" }, // ALT IMAGE
-            { name: "Belgian Dark", price: 150, trending: false, desc: "Intense dark chocolate for cocoa lovers.", img: "https://images.unsplash.com/photo-1596131397999-bb2f47c5d797?w=400" }, // ALT IMAGE
-            { name: "KitKat Break", price: 130, trending: false, desc: "Chunky KitKat pieces in a smooth base.", img: "https://images.unsplash.com/photo-1579954115545-a95591f28be0?w=400" },
-            { name: "Berry Silk", price: 110, trending: false, desc: "Velvety strawberry and fresh cream mix.", img: "https://images.unsplash.com/photo-1472555794301-77353b152fb7?w=400" },
-            { name: "Caramel Crunch", price: 125, trending: true, desc: "Golden caramel with crunchy butterscotch.", img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400" },
-            { name: "Brownie Fudge", price: 170, trending: false, desc: "Warm brownie bits in a chilled shake.", img: "https://images.unsplash.com/photo-1632514115426-382902640562?w=400" }, // ALT IMAGE
-            { name: "Saffron Royal", price: 180, trending: false, desc: "Luxury saffron milk with crushed nuts.", img: "https://images.unsplash.com/photo-1595011030018-090c2534571c?w=400" }, // ALT IMAGE
-            { name: "Cold Coffee", price: 99, trending: true, desc: "The classic energetic caffeine kick.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" },
-            { name: "Assam Tea-Zest", price: 129, trending: false, desc: "A special Jorhat tea-infused creamy treat.", img: "https://images.unsplash.com/photo-1544787210-282aa3cc0000?w=400" } // ALT IMAGE
+            { name: "Oreo Classic", price: 120, trending: true, img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400" },
+            { name: "Nutella Blast", price: 160, trending: true, img: "https://images.unsplash.com/photo-1541658016709-827b58629d78?w=400" },
+            { name: "Belgian Dark", price: 150, trending: false, img: "https://images.unsplash.com/photo-1596131397999-bb2f47c5d797?w=400" },
+            { name: "KitKat Break", price: 130, trending: false, img: "https://images.unsplash.com/photo-1579954115545-a95591f28be0?w=400" },
+            { name: "Cold Coffee", price: 99, trending: true, img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" }
         ];
 
         const mocktails = [
-            { name: "Blue Lagoon", price: 110, trending: true, desc: "Sparkling citrus with a blue ocean vibe.", img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400" },
-            { name: "Virgin Mojito", price: 99, trending: true, desc: "Fresh mint and lime to beat the heat.", img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" },
-            { name: "Watermelon Pop", price: 120, trending: false, desc: "Cooling watermelon juice with bubbles.", img: "https://images.unsplash.com/photo-1582760997140-5e36502672ba?w=400" },
-            { name: "Green Apple", price: 110, trending: false, desc: "Crisp and tangy green apple sparkle.", img: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400" },
-            { name: "Peach Tea", price: 90, trending: false, desc: "Cold brewed tea with a fruity peach zest.", img: "https://images.unsplash.com/photo-1543158181-e6f9f670c5b5?w=400" },
-            { name: "Passion Fruit", price: 130, trending: true, desc: "Tropical passion fruit fizz for a sunny day.", img: "https://images.unsplash.com/photo-1563223552-30400d41fca5?w=400" },
-            { name: "Orange Sunrise", price: 115, trending: false, desc: "Beautiful layered citrus and berry juice.", img: "https://images.unsplash.com/photo-1510626398611-c723d3753e27?w=400" },
-            { name: "Spiced Guava", price: 105, trending: false, desc: "Sweet guava with a classic spicy rim.", img: "https://images.unsplash.com/photo-1536935338213-d2c123304403?w=400" },
-            { name: "Sunset Fizz", price: 145, trending: false, desc: "A glowing berry mocktail with ice.", img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400" },
-            { name: "Lemon Sparkle", price: 80, trending: true, desc: "Simple, zesty, and highly refreshing.", img: "https://images.unsplash.com/photo-1620360289413-0ec997762691?w=400" }
+            { name: "Blue Lagoon", price: 110, trending: true, img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400" },
+            { name: "Virgin Mojito", price: 99, trending: true, img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" },
+            { name: "Passion Fruit", price: 130, trending: true, img: "https://images.unsplash.com/photo-1563223552-30400d41fca5?w=400" },
+            { name: "Sunset Fizz", price: 145, trending: false, img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400" },
+            { name: "Lemon Sparkle", price: 80, trending: true, img: "https://images.unsplash.com/photo-1620360289413-0ec997762691?w=400" }
         ];
 
         function createCard(item) {
-            const trendingBadge = item.trending ? 
-                `<div class="absolute top-2 left-2 bg-pink-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full z-10 animate-pulse">🔥 TRENDING</div>` : '';
-            
             return `
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 relative flex flex-col h-full">
-                    ${trendingBadge}
-                    <div class="h-32 overflow-hidden bg-slate-100 flex items-center justify-center">
-                        <img src="${item.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1582760997140-5e36502672ba?w=400&q=80'">
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-slate-100 group">
+                    <div class="h-32 overflow-hidden bg-slate-100">
+                        <img src="${item.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" 
+                        onerror="this.src='https://images.unsplash.com/photo-1544787210-282aa3cc0000?w=400'">
                     </div>
-                    <div class="p-4 flex flex-col flex-grow bg-white">
-                        <h5 class="font-bold text-sm truncate uppercase tracking-tight text-slate-900">${item.name}</h5>
-                        <p class="text-[10px] text-slate-500 italic mt-1 leading-tight flex-grow">${item.desc}</p>
-                        <p class="text-indigo-600 font-black text-lg mt-2">₹${item.price}</p>
+                    <div class="p-4">
+                        <h5 class="font-bold text-[10px] uppercase text-slate-800">${item.name}</h5>
+                        <p class="text-indigo-600 font-black">₹${item.price}</p>
                     </div>
                 </div>
             `;
@@ -108,6 +134,7 @@
 
         document.getElementById('shakes-grid').innerHTML = shakes.map(createCard).join('');
         document.getElementById('mocktails-grid').innerHTML = mocktails.map(createCard).join('');
+        document.getElementById('trending-grid').innerHTML = [...shakes, ...mocktails].filter(i => i.trending).slice(0,3).map(createCard).join('');
     </script>
 </body>
 </html>
