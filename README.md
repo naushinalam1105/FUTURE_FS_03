@@ -17,12 +17,6 @@ The website offers customers an engaging online experience, allowing them to exp
 * 📞 Contact section for seamless communication
 * 🎨 Clean, modern, and user-friendly interface
 
-## 🛠️ Technologies Used
-
-* HTML5
-* CSS3
-* JavaScript
-
 ## 🎯 Project Pitch
 
 This project is more than just a restaurant website—it is a complete digital solution designed to enhance customer engagement and business visibility. It enables customers to conveniently explore the menu, view dish descriptions and prices, discover trending items, and locate the restaurant through an integrated interactive map.
