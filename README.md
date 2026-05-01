@@ -1,8 +1,12 @@
-# 🍽️ Local Business Website – Restaurant Web Solution
+# 🍽️ STARCUPS – Shakes & Mocktails Cafe Website
+
+🔗 **Live Demo:** https://naushinalam1105.github.io/FUTURE_FS_03/
 
 ## 📌 Project Overview
 
-The website provides customers with an engaging online experience, allowing them to explore the restaurant, browse the menu, and access important information with ease.
+It is a modern, responsive website designed for **STARCUPS**, a local cafe in Jorhat,Assam, to establish a strong digital presence and connect with a wider audience.
+
+The website offers customers an engaging online experience, allowing them to explore the restaurant, browse the menu, discover popular dishes, and access essential information with ease.
 
 ## ✨ Key Features
 
@@ -13,16 +17,6 @@ The website provides customers with an engaging online experience, allowing them
 * 📞 Contact section for seamless communication
 * 🎨 Clean, modern, and user-friendly interface
 
-## 🚀 Business Impact
-
-This website helps the restaurant:
-
-* Increase online visibility and reach
-* Build trust through a professional digital presence
-* Provide 24/7 access to menu and business information
-* Improve customer engagement and convenience
-* Strengthen brand identity and support business growth
-
 ## 🛠️ Technologies Used
 
 * HTML5
@@ -31,6 +25,6 @@ This website helps the restaurant:
 
 ## 🎯 Project Pitch
 
-More than just a website, this project is a complete digital solution for a local restaurant. From showcasing dishes with detailed descriptions and pricing to highlighting trending menu items and providing an interactive location map, every feature is designed to enhance customer experience.
+This project is more than just a restaurant website—it is a complete digital solution designed to enhance customer engagement and business visibility. It enables customers to conveniently explore the menu, view dish descriptions and prices, discover trending items, and locate the restaurant through an integrated interactive map.
 
-By combining functionality, aesthetics, and accessibility, the website helps attract new customers, improve engagement, and support long-term business growth.
+By combining functionality, aesthetics, and accessibility, the website creates a seamless user experience while strengthening the restaurant’s online presence. It helps build credibility, attract potential customers, and provide round-the-clock access to essential information, ultimately supporting long-term growth and brand recognition.
