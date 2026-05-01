@@ -7,150 +7,154 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { transition: background-color 0.5s ease, color 0.5s ease; }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Original Theme: Dark Pink & White */
+        :root {
+            --primary: #be185d; /* Dark Pink */
+            --bg: #ffffff;
+            --text: #1f2937;
+            --card-bg: #fff1f2;
         }
-        .theme-blue { background-color: #0f172a; color: #e2e8f0; }
+
+        /* Blue Lagoon Theme */
+        .blue-lagoon {
+            --primary: #0ea5e9; /* Ocean Blue */
+            --bg: #0f172a;
+            --text: #f1f5f9;
+            --card-bg: #1e293b;
+        }
+
+        body { background-color: var(--bg); color: var(--text); transition: all 0.5s ease; }
+        .theme-accent { color: var(--primary); }
+        .theme-bg-accent { background-color: var(--primary); }
+        .glass-card { background: var(--card-bg); border: 1px solid rgba(0,0,0,0.05); }
+        .blue-lagoon .glass-card { border: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
-<body id="body-theme" class="bg-slate-950 font-sans text-slate-200 scroll-smooth">
+<body class="font-sans">
 
-    <!-- Navbar -->
-    <nav id="navbar" class="flex justify-between items-center px-8 py-5 bg-slate-950/80 backdrop-blur-lg sticky top-0 z-50 border-b border-white/10 transition-colors duration-500">
-        <h1 class="text-2xl font-black italic tracking-tighter uppercase text-white">Star<span id="logo-accent" class="text-amber-500">cups</span></h1>
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center px-8 py-5 bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-pink-100">
+        <h1 class="text-2xl font-black italic tracking-tighter uppercase text-pink-700">Star<span class="text-pink-500">cups</span></h1>
         
-        <div class="hidden lg:flex space-x-6 font-bold text-[10px] uppercase tracking-[0.2em] text-slate-400">
-            <a href="#home" class="hover:text-white transition">Home</a>
-            <a href="#shakes" class="hover:text-white transition">Shakes</a>
-            <a href="#mocktails" class="hover:text-white transition">Mocktails</a>
-            <a href="#trending" class="hover:text-white transition">Trending</a>
-            <a href="#about" class="hover:text-white transition">About</a>
-            <a href="#visit" class="hover:text-white transition">Location</a>
+        <div class="hidden lg:flex space-x-6 font-bold text-[10px] uppercase tracking-widest text-slate-500">
+            <a href="#home" class="hover:text-pink-600">Home</a>
+            <a href="#shakes" class="hover:text-pink-600">Shakes</a>
+            <a href="#mocktails" class="hover:text-pink-600">Mocktails</a>
+            <a href="#trending" class="hover:text-pink-600">Trending</a>
+            <a href="#about" class="hover:text-pink-600">Reviews</a>
+            <a href="#visit" class="hover:text-pink-600">Location</a>
         </div>
 
-        <button onclick="toggleTheme()" class="bg-amber-500 hover:bg-amber-400 text-black font-black text-[10px] px-4 py-2 rounded-full uppercase tracking-widest transition-all" id="theme-btn">
+        <button onclick="toggleTheme()" class="bg-pink-700 text-white font-black text-[10px] px-5 py-2 rounded-full uppercase tracking-tighter hover:scale-105 transition">
             Blue Lagoon Theme
         </button>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <header id="home" class="relative h-[60vh] flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=1600');"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950 z-10"></div>
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1579954115545-a95591f28be0?w=1200&q=80');"></div>
+        <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
         <div class="relative z-20 px-6">
-            <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase italic text-white leading-tight">The <span id="hero-accent" class="text-amber-500">Drink</span> of Joy</h2>
-            <p class="text-slate-400 text-md italic">Premium thick shakes and mocktails at Baruah Chariali, Jorhat.</p>
+            <h2 class="text-6xl md:text-8xl font-black mb-4 uppercase tracking-tighter italic text-pink-800">The Drink of <span class="text-pink-600">Joy</span></h2>
+            <p class="text-pink-900 text-lg font-bold italic tracking-wide">Premium Sips in the heart of Jorhat.</p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-8 py-16">
-        <!-- Shakes -->
-        <section id="shakes" class="mb-24">
-            <h3 class="text-2xl font-black uppercase italic mb-10 border-l-4 border-amber-500 pl-4 tracking-widest">Indulgent Shakes</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8" id="shakes-grid"></div>
+    <!-- Menu Sections -->
+    <main class="max-w-7xl mx-auto px-8 py-20">
+        
+        <div id="shakes" class="mb-24 pt-10">
+            <h3 class="text-3xl font-black uppercase italic mb-10 border-l-8 border-pink-700 pl-4">Indulgent Shakes</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8" id="shakes-grid"></div>
+        </div>
+
+        <div id="mocktails" class="mb-24 pt-10">
+            <h3 class="text-3xl font-black uppercase italic mb-10 border-l-8 border-cyan-500 pl-4">Sparkling Mocktails</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8" id="mocktails-grid"></div>
+        </div>
+
+        <!-- Trending -->
+        <section id="trending" class="py-20 px-8 rounded-[3rem] bg-pink-50 border border-pink-100 text-center mb-24 pt-10">
+            <h3 class="text-4xl font-black uppercase italic mb-12 text-pink-800">🔥 Top Trending</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto" id="trending-grid"></div>
         </section>
 
-        <!-- Mocktails -->
-        <section id="mocktails" class="mb-24">
-            <h3 class="text-2xl font-black uppercase italic mb-10 border-l-4 border-cyan-500 pl-4 tracking-widest">Sparkling Mocktails</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8" id="mocktails-grid"></div>
-        </section>
-
-        <!-- About/Reviews -->
-        <section id="about" class="py-16">
-            <h3 class="text-2xl font-black uppercase italic mb-12 text-center tracking-widest">Customer Reviews</h3>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="glass-card p-6 rounded-3xl italic text-[11px] text-slate-400">
-                    <p class="mb-4">"Best Oreo shake in Jorhat! Perfect thickness."</p>
-                    <span class="text-white font-bold">— Rahul S.</span>
+        <!-- Reviews Section -->
+        <section id="about" class="py-20 pt-10">
+            <h3 class="text-3xl font-black uppercase italic mb-16 text-center text-pink-800">Customer Love</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-3xl shadow-sm italic text-sm border-pink-100">
+                    <p class="mb-4">"The Oreo Classic is my go-to! Thick, creamy, and better than any cafe in Jorhat."</p>
+                    <span class="font-black text-pink-700 text-xs">— Rahul S.</span>
                 </div>
-                <div class="glass-card p-6 rounded-3xl italic text-[11px] text-slate-400">
-                    <p class="mb-4">"Blue Lagoon is my go-to refreshing drink."</p>
-                    <span class="text-white font-bold">— Priya B.</span>
+                <div class="glass-card p-8 rounded-3xl shadow-sm italic text-sm">
+                    <p class="mb-4">"Absolutely refreshing Blue Lagoon. Perfect for hot summer days."</p>
+                    <span class="font-black text-pink-700 text-xs">— Priya B.</span>
                 </div>
-                <div class="glass-card p-6 rounded-3xl italic text-[11px] text-slate-400">
-                    <p class="mb-4">"Great quality for the price. Love the vibe."</p>
-                    <span class="text-white font-bold">— Amit K.</span>
+                <div class="glass-card p-8 rounded-3xl shadow-sm italic text-sm">
+                    <p class="mb-4">"Budget friendly yet premium quality. A student's paradise!"</p>
+                    <span class="font-black text-pink-700 text-xs">— Amit K.</span>
                 </div>
-                <div class="glass-card p-6 rounded-3xl italic text-[11px] text-slate-400">
-                    <p class="mb-4">"Nutella Blast is heaven in a glass!"</p>
-                    <span class="text-white font-bold">— Sneha D.</span>
+                <div class="glass-card p-8 rounded-3xl shadow-sm italic text-sm">
+                    <p class="mb-4">"Nutella Blast is a chocolate lover's dream come true."</p>
+                    <span class="font-black text-pink-700 text-xs">— Sneha D.</span>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer id="visit" class="bg-black py-16 px-10 border-t border-white/10">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-            <div class="space-y-4">
-                <h3 class="text-2xl font-black uppercase italic">Find Us</h3>
-                <p class="text-slate-400 text-xs"><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Baruah Chariali, Near Monisha Bakery, Jorhat</p>
-                <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Open: 10:00 AM - 10:00 PM</p>
+    <!-- Visit/Contact -->
+    <footer id="visit" class="bg-slate-900 text-white py-24 px-8 pt-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-3xl font-black uppercase mb-8 italic">Find Us</h3>
+                <div class="space-y-4 text-slate-400 font-bold text-xs tracking-widest">
+                    <p><i class="fas fa-map-marker-alt text-pink-500 mr-2"></i> Baruah Chariali, Jorhat</p>
+                    <p><i class="fas fa-phone text-pink-500 mr-2"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-clock text-pink-500 mr-2"></i> 10:00 AM - 10:00 PM</p>
+                </div>
             </div>
-            <div class="h-48 rounded-2xl overflow-hidden opacity-50">
+            <div class="lg:col-span-2 h-64 rounded-3xl overflow-hidden shadow-2xl">
                 <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?q=Baruah%20Chariali,%20Jorhat,%20Assam&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe>
-            </div>
-            <div class="text-right text-[10px] text-slate-600 font-bold tracking-widest uppercase">
-                &copy; 2026 Starcups Jorhat | Created by Naushin
             </div>
         </div>
     </footer>
 
     <script>
         function toggleTheme() {
-            const body = document.getElementById('body-theme');
-            const btn = document.getElementById('theme-btn');
-            const logo = document.getElementById('logo-accent');
-            const heroAcc = document.getElementById('hero-accent');
-            
-            if (body.classList.contains('theme-blue')) {
-                body.classList.remove('theme-blue');
-                body.style.backgroundColor = "#020617";
-                btn.innerText = "Blue Lagoon Theme";
-                btn.style.backgroundColor = "#f59e0b";
-                logo.style.color = "#f59e0b";
-                heroAcc.style.color = "#f59e0b";
-            } else {
-                body.classList.add('theme-blue');
-                body.style.backgroundColor = "#0f172a";
-                btn.innerText = "Classic Dark Theme";
-                btn.style.backgroundColor = "#0ea5e9";
-                logo.style.color = "#38bdf8";
-                heroAcc.style.color = "#38bdf8";
-            }
+            document.body.classList.toggle('blue-lagoon');
         }
 
         const shakes = [
-            { name: "Oreo Classic", price: 120, desc: "Vanilla cream blended with authentic Oreo chunks.", img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400" },
-            { name: "Nutella Blast", price: 160, desc: "A decadent blend of hazelnut and rich cocoa.", img: "https://images.unsplash.com/photo-1541658016709-827b58629d78?w=400" },
-            { name: "Belgian Dark", price: 150, desc: "Signature bittersweet dark chocolate.", img: "https://images.unsplash.com/photo-1626078299034-9c4440182a17?w=400" },
-            { name: "KitKat Break", price: 130, desc: "Chunky KitKat pieces in every thick sip.", img: "https://images.unsplash.com/photo-1579954115545-a95591f28be0?w=400" },
-            { name: "Cold Coffee", price: 99, desc: "Freshly roasted bean extract served icy cold.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" }
+            { name: "Oreo Classic", price: 120, trending: true, desc: "Vanilla cream with authentic Oreo chunks.", img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500" },
+            { name: "Nutella Blast", price: 160, trending: true, desc: "A decadent blend of hazelnut and rich cocoa.", img: "https://images.unsplash.com/photo-1541658016709-827b58629d78?w=500" },
+            { name: "Belgian Dark", price: 150, trending: false, desc: "Signature bittersweet dark chocolate.", img: "https://images.unsplash.com/photo-1626078299034-9c4440182a17?w=500" },
+            { name: "KitKat Break", price: 130, trending: false, desc: "Chunky KitKat pieces in every thick sip.", img: "https://images.unsplash.com/photo-1579954115545-a95591f28be0?w=500" },
+            { name: "Cold Coffee", price: 99, trending: true, desc: "Freshly roasted bean extract served icy.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500" }
         ];
 
         const mocktails = [
-            { name: "Blue Lagoon", price: 110, desc: "Sparkling citrus with a blue ocean vibe.", img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" },
-            { name: "Virgin Mojito", price: 99, desc: "Fresh muddled mint, lime, and sparkling soda.", img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" },
-            { name: "Passion Fruit", price: 130, desc: "Tropical aromatic passion fruit bliss.", img: "https://images.unsplash.com/photo-1563223552-30400d41fca5?w=400" },
-            { name: "Sunset Fizz", price: 145, desc: "A layered berry and citrus glow in a glass.", img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400" },
-            { name: "Lemon Sparkle", price: 80, desc: "Zesty and refreshing lemon thirst-quencher.", img: "https://images.unsplash.com/photo-1620360289413-0ec997762691?w=400" }
+            { name: "Blue Lagoon", price: 110, trending: true, desc: "Sparkling citrus with a blue ocean vibe.", img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=500" },
+            { name: "Virgin Mojito", price: 99, trending: true, desc: "Fresh muddled mint, lime, and sparkling soda.", img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500" },
+            { name: "Passion Fruit", price: 130, trending: true, desc: "Tropical aromatic passion fruit bliss.", img: "https://images.unsplash.com/photo-1563223552-30400d41fca5?w=500" },
+            { name: "Sunset Fizz", price: 145, trending: false, desc: "A layered berry and citrus glow.", img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500" },
+            { name: "Lemon Sparkle", price: 80, trending: true, desc: "The ultimate zesty thirst quencher.", img: "https://images.unsplash.com/photo-1620360289413-0ec997762691?w=500" }
         ];
 
         function createCard(item) {
             return `
-                <div class="glass-card rounded-3xl overflow-hidden group hover:scale-[1.03] transition-all duration-500">
-                    <div class="h-40 overflow-hidden">
-                        <img src="${item.img}" class="w-full h-full object-cover" 
-                        onerror="this.src='https://images.unsplash.com/photo-1544787210-282aa3cc0000?w=400'">
+                <div class="glass-card rounded-[2rem] overflow-hidden group hover:shadow-xl transition-all duration-500">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="${item.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" 
+                        onerror="this.src='https://images.unsplash.com/photo-1544787210-282aa3cc0000?w=500'">
                     </div>
-                    <div class="p-5">
-                        <h5 class="font-bold text-[10px] uppercase tracking-widest text-white mb-2">${item.name}</h5>
-                        <p class="text-[9px] text-slate-500 italic mb-4 leading-tight">${item.desc}</p>
-                        <p class="text-amber-500 font-black text-lg">₹${item.price}</p>
+                    <div class="p-6">
+                        <h5 class="font-black text-xs uppercase tracking-widest mb-2">${item.name}</h5>
+                        <p class="text-[10px] opacity-60 italic mb-4 leading-relaxed">${item.desc}</p>
+                        <p class="font-black text-xl text-pink-600">₹${item.price}</p>
                     </div>
                 </div>
             `;
@@ -158,6 +162,7 @@
 
         document.getElementById('shakes-grid').innerHTML = shakes.map(createCard).join('');
         document.getElementById('mocktails-grid').innerHTML = mocktails.map(createCard).join('');
+        document.getElementById('trending-grid').innerHTML = [...shakes, ...mocktails].filter(i => i.trending).slice(0,3).map(createCard).join('');
     </script>
 </body>
 </html>
